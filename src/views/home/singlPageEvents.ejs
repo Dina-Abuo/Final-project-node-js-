@@ -1,0 +1,35 @@
+<section>
+    <div class="container " style="margin-top:200px;">
+        <div class="row">
+            <div class="col-lg-6">
+                <div style=" width:500px; ">
+                    <img class="img-fluid" src="/images/image_<%= event.id %>.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-text">
+                    <h3>
+                        <%= event.title %>
+                    </h3>
+                    <p>
+                        <%= event.description %>
+                    </p>
+                    <dl>
+                        <dt style="color: #001;">Date</dt>
+                        <dd class="ms-5">
+                            <%= event.date %>
+                        </dd>
+                        <dt style="color: #001;">Location</dt>
+                        <dd class="ms-5"> qena</dd>
+                        <dt style="color: #001;"> Price Ticket</dt>
+                        <dd class="ms-5">
+                            <%= event.ticketPrice %> <b>$</b>
+                        </dd>
+                    </dl>
+                    <div class="d-flex flex-row-reverse"> <button class="btn btn-lg btn-primary mt-3 mb-5 "> Buy Ticket</button></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

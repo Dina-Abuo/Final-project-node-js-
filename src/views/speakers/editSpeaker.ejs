@@ -1,0 +1,119 @@
+<% Title="Edit Speaker" %>
+
+  <div class="container  w-50 mt-5 mb-5">
+    <form method="post" action="/speaker/edit/<%= model.id %>">
+      <div class="form-group">
+        <label for="firstName">First name</label>
+        <input name="firstName" value="<%= model.firstName %>" id="firstName" type="text" class="form-control"
+          placeholder="Enter type name">
+        <span id="error-firstName">error-firstName </span>
+
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last name</label>
+        <input name="lastName" value="<%= model.lastName %>" id="lastName" type="text" class="form-control"
+          placeholder="Enter type name">
+        <span id="error-lastName">error-lastName </span>
+
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone number</label>
+        <input name="phone" value="<%= model.phone %>" id="phone" type="text" class="form-control"
+          placeholder="Enter your phone number">
+        <span id="error-phone">error-phone </span>
+
+      </div>
+      <div class="form-group">
+        <label for="gender"> Gender </label>
+        <select name="gender" id="gender" class="form-control">
+          <option selected hidden value="<%= model[" gender"] %>"> <%= model.gender %>
+          </option>
+          <option value="male"> Male </option>
+          <option value="female"> Female </option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="country">Country</label>
+        <input name="country" value="<%= model.country %>" id="country" type="text" class="form-control"
+          placeholder="Enter your country name">
+      </div>
+
+      <div class="form-group">
+        <label for="city">City</label>
+        <input name="city" value="<%= model.city %>" id="city" type="text" class="form-control"
+          placeholder="Enter your city name">
+      </div>
+
+      <div class="form-group">
+        <label for="job">job</label>
+        <input name="job" value="<%= model.job %>" type="text" class="form-control" id="job"
+          placeholder="Enter your job">
+      </div>
+      <div class="form-group">
+        <label for="facebook">Facebook</label>
+        <input name="facebook" value="<%= model.facebook %>" id="facebook" type="text" class="form-control"
+          placeholder="Enter your city name">
+      </div>
+      <div class="form-group">
+        <label for="linkedin">Linkedin</label>
+        <input name="linkedin" value="<%= model.linkedin %>" id="linkedin" type="text" class="form-control"
+          placeholder="Enter your city name">
+      </div>
+      <input type="submit" class="btn btn-primary" value="Edit">
+      <a href="/speaker" class="ml-2 btn btn-secondary">Back to list</a>
+    </form>
+  </div>
+
+
+  <script>
+
+    const errorlastName = document.getElementById('error-lastName');
+    document.getElementById('lastName').addEventListener('keyup', () => {
+      let lastName = document.getElementById('lastName').value;
+      if (lastName.length == 0) {
+        errorTitle.innerHTML = 'Name is requried';
+        return false;
+      }
+      if (!lastName.match(/^[A-Za-z]*\S{1}[A - Za - z]*$/)) {
+        errorTitle.innerHTML = '<i>&#xf058;</i>';
+        return true;
+      }
+    })
+
+    const errorfirstName = document.getElementById('error-firstName');
+    document.getElementById('firstName').addEventListener('keyup', () => {
+      let firstName = document.getElementById('firstName').value;
+      if (firstName.length == 0) {
+        errorTitle.innerHTML = 'Name is requried';
+        return false;
+      }
+      if (!firstName.match(/^[A-Za-z]*\S{1}[A - Za - z]*$/)) {
+        errorTitle.innerHTML = '<i>&#xf058;</i>';
+        return true;
+      }
+    })
+
+
+    const errorphone = document.getElementById('error-phone');
+    document.getElementById('phone').addEventListener('keyup', () => {
+      let phone = document.getElementById('phone').value;
+      if (phone.length == 0) {
+        errorphone.innerHTML = 'Phone is requried';
+        return false;
+      }
+      if (phone.length !== 10) {
+        errorphone.innerHTML = 'Phone on should be 10 digite ';
+        return false;
+      }
+      if (!phone.match(/^[0-9]{10}$/)) {
+        errorphone.innerHTML = 'only digits please .';
+        return false;
+      }
+      errorphone.innerHTML = '<i>&#xf058;</i>';
+      return true;
+
+    })
+
+
+  </script>

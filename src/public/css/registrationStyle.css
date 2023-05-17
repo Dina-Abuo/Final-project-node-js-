@@ -1,0 +1,77 @@
+* {
+    --color-blow: #6b76ff;
+    --color-white: #fff;
+    --colorCoralRed: #f355cb;
+    --colorBlowBlack: #171822;
+    --colorWhite: #fff;
+    --color-blue-gray-light: #a0a1b5;
+    --color-blue-gray-darck: #2f3039;
+}
+
+/* .body-login {
+    background: url('images/background.webp');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+.login-wrapper {
+    background: rgba(172, 181, 199, 0.7);
+    height: 100vh;
+    position: relative;
+}
+
+.content-from {
+    background-image: linear-gradient(to right, var(--color-white) 0%, var(--color-blow) 100%), linear-gradient(to right, var(--color-white) 0%,
+            var(--color-blow) 100%);
+
+}
+
+.card-form {
+    background-color: var(--color-white);
+
+}
+
+.colorText {
+    color: var(--color-white);
+}
+
+.input__image {
+    display: none;
+}
+
+
+
+.image-fluid {
+    max-width: 100%;
+    height: 150px;
+}
+
+.form-check-input:checked {
+    background-color: var(--color-blow);
+    border-color: var(--color-blow);
+    box-shadow: none;
+}
+
+.form-control:focus {
+    border-color: var(--colorCoralRed);
+    box-shadow: none;
+}
+
+.form-select:focus {
+    border-color: var(--colorCoralRed);
+    box-shadow: none;
+}
+
+.btnSubmit {
+    color: var(--color-white);
+    background-color: var(--colorCoralRed);
+}
+
+.btnSubmit:hover {
+    background-image: var(--color-blow);
+}
+
+.btnReset {
+    background-color: var(--color-blue-gray-light);
+}
